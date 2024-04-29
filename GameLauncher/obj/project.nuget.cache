@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "LeigSS+cG4OiZZ9zrPfhppGSb0Rt3GhuPBnJN0uxUBn8gOMkQLcJ8dLBDh5ahmvcq+bKWaYEXozhJ1OT63Bt6Q==",
+  "dgSpecHash": "xSDG3cLFkamYY8yrwDLNeNwALGzA6McKLlrluatPv9/dOanWLApWC0/IePZgQwxyZ7Mdy69KFOkltctwYRbjQA==",
   "success": true,
-  "projectFilePath": "D:\\Usuaris\\argo\\Documents\\Mario\\gameLauncher\\GameLauncher\\GameLauncher\\GameLauncher.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Mario\\Documents\\Repositorios\\GameLauncher\\GameLauncher\\GameLauncher.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Mario\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.29\\microsoft.windowsdesktop.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\Mario\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.29\\microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\Mario\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.29\\microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\Mario\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.29\\microsoft.netcore.app.host.win-x64.6.0.29.nupkg.sha512"
+  ],
   "logs": []
 }

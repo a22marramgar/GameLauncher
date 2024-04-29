@@ -70,7 +70,7 @@ namespace GameLauncher
                 try
                 {
                     WebClient webClient = new WebClient();
-                    Version onlineVersion = new Version(webClient.DownloadString("https://drive.google.com/uc?export=download&id=1B0mi4NxHKuT84Vg9Ws2bIXikYzimqPHq"));
+                    Version onlineVersion = new Version(webClient.DownloadString("https://onedrive.live.com/download?resid=82A5D8627B8C73F6%214113&authkey=!ACpSW6dtbU-aZXc"));
 
                     if (onlineVersion.IsDifferentThan(localVersion))
                     {
@@ -105,11 +105,11 @@ namespace GameLauncher
                 else
                 {
                     Status = LauncherStatus.downloadingGame;
-                    _onlineVersion = new Version(webClient.DownloadString("https://drive.google.com/uc?export=download&id=1B0mi4NxHKuT84Vg9Ws2bIXikYzimqPHq"));
+                    _onlineVersion = new Version(webClient.DownloadString("https://onedrive.live.com/download?resid=82A5D8627B8C73F6%214113&authkey=!ACpSW6dtbU-aZXc"));
                 }
 
                 webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(DownloadGameCompletedCallback);
-                webClient.DownloadFileAsync(new Uri("https://drive.google.com/uc?export=download&id=16gda9dmEt8jANc9thCCScyIyaD23nbJs"), gameZip, _onlineVersion);
+                webClient.DownloadFileAsync(new Uri("https://onedrive.live.com/download?resid=82A5D8627B8C73F6%214114&authkey=!AOJhq3HlX-0ACgo"), gameZip, _onlineVersion);
             }
             catch (Exception ex)
             {
@@ -144,8 +144,10 @@ namespace GameLauncher
 
         private void PlayButton_Click(object sender, RoutedEventArgs e)
         {
+            Debug.WriteLine(File.Exists(gameExe));
             if (File.Exists(gameExe) && Status == LauncherStatus.ready)
             {
+                Debug.WriteLine("Starting game");
                 ProcessStartInfo startInfo = new ProcessStartInfo(gameExe);
                 startInfo.WorkingDirectory = Path.Combine(rootPath, "Build");
                 Process.Start(startInfo);
