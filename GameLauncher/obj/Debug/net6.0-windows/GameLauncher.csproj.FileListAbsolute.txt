@@ -39,3 +39,5 @@ C:\Users\Mario\Documents\Repositorios\GameLauncher\GameLauncher\obj\Debug\net6.0
 C:\Users\Mario\Documents\Repositorios\GameLauncher\GameLauncher\obj\Debug\net6.0-windows\GameLauncher.pdb
 C:\Users\Mario\Documents\Repositorios\GameLauncher\GameLauncher\obj\Debug\net6.0-windows\GameLauncher.genruntimeconfig.cache
 C:\Users\Mario\Documents\Repositorios\GameLauncher\GameLauncher\obj\Debug\net6.0-windows\ref\GameLauncher.dll
+D:\Usuaris\argo\Documents\Mario\gameLauncher\GameLauncher\GameLauncher\obj\Debug\net6.0-windows\LoginWindow.g.cs
+D:\Usuaris\argo\Documents\Mario\gameLauncher\GameLauncher\GameLauncher\obj\Debug\net6.0-windows\LoginWindow.baml

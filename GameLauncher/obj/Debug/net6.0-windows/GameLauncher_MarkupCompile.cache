@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Mario\Documents\Repositorios\GameLauncher\GameLauncher\obj\Debug\net6.0-windows\
+D:\Usuaris\argo\Documents\Mario\gameLauncher\GameLauncher\GameLauncher\obj\Debug\net6.0-windows\
 GameLauncher
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\Mario\Documents\Repositorios\GameLauncher\GameLauncher\App.xaml
-11407045341
+D:\Usuaris\argo\Documents\Mario\gameLauncher\GameLauncher\GameLauncher\App.xaml
+2-216653475
 
-4-2114347821
-1941152032993
-MainWindow.xaml;
+4-1844475548
+194183970531
+LoginWindow.xaml;MainWindow.xaml;
 
 False
 

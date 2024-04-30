@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mario\\Documents\\Repositorios\\GameLauncher\\GameLauncher\\GameLauncher.csproj": {}
+    "D:\\Usuaris\\argo\\Documents\\Mario\\gameLauncher\\GameLauncher\\GameLauncher\\GameLauncher.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mario\\Documents\\Repositorios\\GameLauncher\\GameLauncher\\GameLauncher.csproj": {
+    "D:\\Usuaris\\argo\\Documents\\Mario\\gameLauncher\\GameLauncher\\GameLauncher\\GameLauncher.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mario\\Documents\\Repositorios\\GameLauncher\\GameLauncher\\GameLauncher.csproj",
+        "projectUniqueName": "D:\\Usuaris\\argo\\Documents\\Mario\\gameLauncher\\GameLauncher\\GameLauncher\\GameLauncher.csproj",
         "projectName": "GameLauncher",
-        "projectPath": "C:\\Users\\Mario\\Documents\\Repositorios\\GameLauncher\\GameLauncher\\GameLauncher.csproj",
-        "packagesPath": "C:\\Users\\Mario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mario\\Documents\\Repositorios\\GameLauncher\\GameLauncher\\obj\\",
+        "projectPath": "D:\\Usuaris\\argo\\Documents\\Mario\\gameLauncher\\GameLauncher\\GameLauncher\\GameLauncher.csproj",
+        "packagesPath": "C:\\Users\\argo\\.nuget\\packages\\",
+        "outputPath": "D:\\Usuaris\\argo\\Documents\\Mario\\gameLauncher\\GameLauncher\\GameLauncher\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Mario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\argo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -50,24 +50,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.29, 6.0.29]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.29, 6.0.29]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.29, 6.0.29]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.29, 6.0.29]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -76,7 +58,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.315\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
