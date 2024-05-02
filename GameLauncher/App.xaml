@@ -4,6 +4,11 @@
              xmlns:local="clr-namespace:GameLauncher"
              StartupUri="LoginWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="WinAll" TargetType="{x:Type Window}">
+            <Setter Property="FontFamily"
+        Value="Bahnschrift SemiBold Condensed" />
+            <Setter Property="FontSize"
+        Value="14" />
+        </Style>
     </Application.Resources>
 </Application>

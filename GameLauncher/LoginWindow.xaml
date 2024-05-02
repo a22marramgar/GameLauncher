@@ -6,59 +6,23 @@
         xmlns:local="clr-namespace:GameLauncher"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Login" Height="500" Width="400">
+        Title="Login" Height="500" Width="400"
+        ResizeMode="NoResize"
+        Background="#FF1D222C"
+        Style="{StaticResource WinAll}">
     <Grid>
-        <TextBlock Name="TitleText" Text="ROBOT ESCAPE" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="24" Foreground="White"/>
-        <Image Stretch="UniformToFill" Source="images/LauncherBackground.jpg"/>
-        <TextBox Name="EmailTextBox" FontSize="24" Margin="36,133,36,291">
-            <TextBox.Style>
-                <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-                    <Style.Resources>
-                        <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
-                            <VisualBrush.Visual>
-                                <Label Content="Email" Foreground="LightGray" />
-                            </VisualBrush.Visual>
-                        </VisualBrush>
-                    </Style.Resources>
-                    <Style.Triggers>
-                        <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
-                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
-                        </Trigger>
-                        <Trigger Property="Text" Value="{x:Null}">
-                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
-                        </Trigger>
-                        <Trigger Property="IsKeyboardFocused" Value="True">
-                            <Setter Property="Background" Value="White" />
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </TextBox.Style>
-        </TextBox>
-        <TextBox Name="PasswordTextBox" FontSize="24" Margin="36,212,36,212">
-            <TextBox.Style>
-                <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-                    <Style.Resources>
-                        <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
-                            <VisualBrush.Visual>
-                                <Label Content="Password" Foreground="LightGray" />
-                            </VisualBrush.Visual>
-                        </VisualBrush>
-                    </Style.Resources>
-                    <Style.Triggers>
-                        <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
-                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
-                        </Trigger>
-                        <Trigger Property="Text" Value="{x:Null}">
-                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
-                        </Trigger>
-                        <Trigger Property="IsKeyboardFocused" Value="True">
-                            <Setter Property="Background" Value="White" />
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </TextBox.Style>
-        </TextBox>
-        <Button Name="LoginButton" Content="Login" Click="LoginButton_Click" Height="60" FontSize="28" FontWeight="Bold" Foreground="#DDFFFFFF" Margin="0,302,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" MinWidth="150" Padding="10,1,10,1" Width="328"/>
-
+        <TextBlock Name="TitleText" Text="ROBOT ESCAPE" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="48" Foreground="White" Margin="0,40,0,0"/>
+        <TextBlock Name="EmailText" Text="Email" FontSize="24" Foreground="White" Height="40" Margin="0,105,0,0" VerticalAlignment="Top" Width="328" HorizontalAlignment="Center"/>
+        <TextBox Name="EmailTextBox" Background="#FF0E1116" Foreground="White" FontSize="24" Margin="0,133,0,0" VerticalAlignment="Top" Width="328" HorizontalAlignment="Center" Height="40" Padding="5,5,0,0" ScrollViewer.CanContentScroll="True"/>
+        <TextBlock Name="PasswordText" Text="Password" FontSize="24" Foreground="White" Height="40" Margin="0,183,0,0" VerticalAlignment="Top" Width="328" HorizontalAlignment="Center"/>
+        <PasswordBox Name="PasswordTextBox" Background="#FF0E1116" Foreground="White" FontSize="24" Margin="0,212,0,0" VerticalAlignment="Top" Width="328" Height="40" Padding="5,5,0,0" HorizontalAlignment="Center"/>
+        <Button Name="LoginButton" Content="Log In" Click="LoginButton_Click" Height="60" FontSize="28" FontWeight="Bold" Foreground="#DDFFFFFF" Margin="0,302,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" MinWidth="150" Padding="10,1,10,1" Width="328" Background="#FF0E86CA"/>
+        <TextBlock Name="RegisterText" FontSize="24" Height="40" TextAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,30">
+    <Hyperlink NavigateUri="https://github.com/a22marramgar/GameLauncher/tree/LoginWindow" Foreground="#FF0595DA" TextDecorations="Underline" RequestNavigate="Hyperlink_RequestNavigate">
+        Create a free account
+    </Hyperlink>
+</TextBlock>
     </Grid>
+
 </Window>
+    
