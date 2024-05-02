@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Usuaris\\argo\\Documents\\Mario\\gameLauncher\\GameLauncher\\GameLauncher\\GameLauncher.csproj": {}
+    "C:\\Users\\Mario\\Documents\\Repositorios\\GameLauncher\\GameLauncher\\GameLauncher.csproj": {}
   },
   "projects": {
-    "D:\\Usuaris\\argo\\Documents\\Mario\\gameLauncher\\GameLauncher\\GameLauncher\\GameLauncher.csproj": {
+    "C:\\Users\\Mario\\Documents\\Repositorios\\GameLauncher\\GameLauncher\\GameLauncher.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Usuaris\\argo\\Documents\\Mario\\gameLauncher\\GameLauncher\\GameLauncher\\GameLauncher.csproj",
+        "projectUniqueName": "C:\\Users\\Mario\\Documents\\Repositorios\\GameLauncher\\GameLauncher\\GameLauncher.csproj",
         "projectName": "GameLauncher",
-        "projectPath": "D:\\Usuaris\\argo\\Documents\\Mario\\gameLauncher\\GameLauncher\\GameLauncher\\GameLauncher.csproj",
-        "packagesPath": "C:\\Users\\argo\\.nuget\\packages\\",
-        "outputPath": "D:\\Usuaris\\argo\\Documents\\Mario\\gameLauncher\\GameLauncher\\GameLauncher\\obj\\",
+        "projectPath": "C:\\Users\\Mario\\Documents\\Repositorios\\GameLauncher\\GameLauncher\\GameLauncher.csproj",
+        "packagesPath": "C:\\Users\\Mario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mario\\Documents\\Repositorios\\GameLauncher\\GameLauncher\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\argo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +39,16 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "FontAwesome.WPF": {
+              "target": "Package",
+              "version": "[4.7.0.9, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -50,6 +60,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -58,7 +86,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.315\\RuntimeIdentifierGraph.json"
         }
       }
     }
