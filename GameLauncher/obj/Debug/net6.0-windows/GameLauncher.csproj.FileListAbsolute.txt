@@ -39,3 +39,12 @@ C:\Users\Mario\Documents\Repositorios\GameLauncher\GameLauncher\obj\Debug\net6.0
 C:\Users\Mario\Documents\Repositorios\GameLauncher\GameLauncher\obj\Debug\net6.0-windows\GameLauncher.pdb
 C:\Users\Mario\Documents\Repositorios\GameLauncher\GameLauncher\obj\Debug\net6.0-windows\GameLauncher.genruntimeconfig.cache
 C:\Users\Mario\Documents\Repositorios\GameLauncher\GameLauncher\obj\Debug\net6.0-windows\ref\GameLauncher.dll
+D:\Usuaris\argo\Documents\Mario\gameLauncher\GameLauncher\GameLauncher\obj\Debug\net6.0-windows\LoginWindow.g.cs
+D:\Usuaris\argo\Documents\Mario\gameLauncher\GameLauncher\GameLauncher\obj\Debug\net6.0-windows\LoginWindow.baml
+D:\Usuaris\argo\Documents\Mario\gameLauncher\GameLauncher\GameLauncher\obj\Debug\net6.0-windows\App.baml
+C:\Users\Mario\Documents\Repositorios\GameLauncher\GameLauncher\obj\Debug\net6.0-windows\LoginWindow.g.cs
+C:\Users\Mario\Documents\Repositorios\GameLauncher\GameLauncher\obj\Debug\net6.0-windows\App.baml
+C:\Users\Mario\Documents\Repositorios\GameLauncher\GameLauncher\obj\Debug\net6.0-windows\LoginWindow.baml
+C:\Users\Mario\Documents\Repositorios\GameLauncher\GameLauncher\bin\Debug\net6.0-windows\FontAwesome.WPF.dll
+C:\Users\Mario\Documents\Repositorios\GameLauncher\GameLauncher\obj\Debug\net6.0-windows\GameLauncher.csproj.CopyComplete
+C:\Users\Mario\Documents\Repositorios\GameLauncher\GameLauncher\bin\Debug\net6.0-windows\Newtonsoft.Json.dll

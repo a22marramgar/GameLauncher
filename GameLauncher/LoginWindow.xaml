@@ -1,0 +1,33 @@
+﻿<Window x:Class="GameLauncher.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameLauncher"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Login" Height="600" Width="400"
+        ResizeMode="NoResize"
+        Background="#15171e"
+        Style="{StaticResource WinAll}">
+    <Grid>
+        <TextBlock Name="TitleText" Text="ROBOT ESCAPE" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="48" Foreground="White" Margin="0,40,0,0"/>
+        <fa:ImageAwesome Name="WarningIcon" Visibility="Hidden" Foreground="#ffb400" Icon="Warning" Height="24" Width="24" Margin="36,140,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <TextBlock Name="WarningText" Visibility="Hidden" Text="Here goes the error" TextWrapping="Wrap" FontSize="24" Foreground="#ffb400" Height="57" Margin="76,123,0,0" VerticalAlignment="Top" Width="278" HorizontalAlignment="Left"/>
+        <TextBlock Name="EmailText" Text="Email" FontSize="24" Foreground="White" Height="40" Margin="0,191,0,0" VerticalAlignment="Top" Width="328" HorizontalAlignment="Center"/>
+        <TextBox Name="EmailTextBox" Background="#101117" Foreground="White" FontSize="24" Margin="0,219,0,0" VerticalAlignment="Top" Width="328" HorizontalAlignment="Center" Height="40" Padding="5,5,0,0" ScrollViewer.CanContentScroll="True"/>
+        <TextBlock Name="PasswordText" Text="Password" FontSize="24" Foreground="White" Height="40" Margin="0,269,0,0" VerticalAlignment="Top" Width="328" HorizontalAlignment="Center"/>
+        <PasswordBox Name="PasswordTextBox" Background="#101117" Foreground="White" FontSize="24" Margin="0,298,0,0" VerticalAlignment="Top" Width="328" Height="40" Padding="5,5,0,0" HorizontalAlignment="Center"/>
+        <Button Style="{StaticResource button1}" Name="LoginButton" Content="Log In" Click="LoginButton_Click" Height="60" FontSize="28" FontWeight="Bold" Foreground="#DDFFFFFF" Margin="0,388,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" MinWidth="150" Padding="10,1,10,1" Width="328"/>
+        <TextBlock Name="RegisterText" FontSize="24" Height="40" TextAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,30">
+    <Hyperlink NavigateUri="https://github.com/a22marramgar/GameLauncher/tree/LoginWindow" Foreground="#3174dc" TextDecorations="Underline" RequestNavigate="Hyperlink_RequestNavigate">
+        Create a free account
+    </Hyperlink>
+        </TextBlock>
+        <fa:ImageAwesome Name="LoadingIcon" Visibility="Hidden" Foreground="White" Icon="Refresh" Spin="True" Height="48" Width="48" />
+
+    </Grid>
+
+</Window>
+    
