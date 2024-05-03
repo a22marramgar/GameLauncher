@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\Usuaris\argo\Documents\Mario\gameLauncher\GameLauncher\GameLauncher\App.xaml
-11407045341
+2-216653475
 
-51804543809
-194183970531
-MainWindow.xaml;
+61193237818
+196705246185
+LoginWindow.xaml;MainWindow.xaml;
 
-False
+True
 
