@@ -2,8 +2,6 @@
 using System.Windows.Navigation;
 
 using System.Windows;
-using System.Windows.Controls;
-using System.Collections;
 using System.Net.Http;
 using System.Text;
 using System;
@@ -60,7 +58,9 @@ namespace GameLauncher
                 if (response.IsSuccessStatusCode)
                 {
                     // Handle successful login here
-                    OpenMainWindow();
+                    MainWindow window = new MainWindow(email + ";" + password);
+                    window.Show();
+                    Close();
                 }
                 else
                 {
@@ -81,12 +81,6 @@ namespace GameLauncher
                 WarningText.Margin = new Thickness(76, 123, 0, 0);
                 WarningText.Text = "It seems the servers are unavailable right now";
             }
-        }
-        private void OpenMainWindow()
-        {
-            MainWindow window = new MainWindow();
-            window.Show();
-            Close();
         }
         private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
         {

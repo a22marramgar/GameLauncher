@@ -48,3 +48,7 @@ C:\Users\Mario\Documents\Repositorios\GameLauncher\GameLauncher\obj\Debug\net6.0
 C:\Users\Mario\Documents\Repositorios\GameLauncher\GameLauncher\bin\Debug\net6.0-windows\FontAwesome.WPF.dll
 C:\Users\Mario\Documents\Repositorios\GameLauncher\GameLauncher\obj\Debug\net6.0-windows\GameLauncher.csproj.CopyComplete
 C:\Users\Mario\Documents\Repositorios\GameLauncher\GameLauncher\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+D:\Usuaris\argo\Documents\Mario\gameLauncher\GameLauncher\GameLauncher\bin\Debug\net6.0-windows\FontAwesome.WPF.dll
+D:\Usuaris\argo\Documents\Mario\gameLauncher\GameLauncher\GameLauncher\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+D:\Usuaris\argo\Documents\Mario\gameLauncher\GameLauncher\GameLauncher\obj\Debug\net6.0-windows\GameLauncher.csproj.AssemblyReference.cache
+D:\Usuaris\argo\Documents\Mario\gameLauncher\GameLauncher\GameLauncher\obj\Debug\net6.0-windows\GameLauncher.csproj.CopyComplete

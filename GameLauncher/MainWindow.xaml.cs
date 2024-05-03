@@ -23,6 +23,7 @@ namespace GameLauncher
         private string versionFile;
         private string gameZip;
         private string gameExe;
+        private string _login;
 
         private LauncherStatus _status;
         
@@ -51,9 +52,10 @@ namespace GameLauncher
                 }
             }
         }
-        public MainWindow()
+        public MainWindow(string login)
         {
             InitializeComponent();
+            _login = login;
             rootPath = Directory.GetCurrentDirectory();
             versionFile = Path.Combine(rootPath,"version.txt");
             gameZip = Path.Combine(rootPath, "Build.zip");
@@ -151,7 +153,7 @@ namespace GameLauncher
                 ProcessStartInfo startInfo = new ProcessStartInfo(gameExe);
                 startInfo.WorkingDirectory = Path.Combine(rootPath, "Build");
                 Process.Start(startInfo);
-
+                File.WriteAllText("Build/login.txt", _login);
                 Close();
             }
             else if (Status == LauncherStatus.failed)
