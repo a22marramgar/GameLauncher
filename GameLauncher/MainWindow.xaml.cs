@@ -153,7 +153,7 @@ namespace GameLauncher
                 ProcessStartInfo startInfo = new ProcessStartInfo(gameExe);
                 startInfo.WorkingDirectory = Path.Combine(rootPath, "Build");
                 Process.Start(startInfo);
-                File.WriteAllText("Build/login.txt", _login);
+                File.WriteAllText("Build/ProyectoFinal2_Data/StreamingAssets/login.txt", _login);
                 Close();
             }
             else if (Status == LauncherStatus.failed)
