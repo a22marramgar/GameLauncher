@@ -19,9 +19,18 @@
         <TextBox Name="EmailTextBox" Background="#101117" Foreground="White" FontSize="24" Margin="0,219,0,0" VerticalAlignment="Top" Width="328" HorizontalAlignment="Center" Height="40" Padding="5,5,0,0" ScrollViewer.CanContentScroll="True"/>
         <TextBlock Name="PasswordText" Text="Password" FontSize="24" Foreground="White" Height="40" Margin="0,269,0,0" VerticalAlignment="Top" Width="328" HorizontalAlignment="Center"/>
         <PasswordBox Name="PasswordTextBox" Background="#101117" Foreground="White" FontSize="24" Margin="0,298,0,0" VerticalAlignment="Top" Width="328" Height="40" Padding="5,5,0,0" HorizontalAlignment="Center"/>
-        <Button Style="{StaticResource button1}" Name="LoginButton" Content="Log In" Click="LoginButton_Click" Height="60" FontSize="28" FontWeight="Bold" Foreground="#DDFFFFFF" Margin="0,388,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" MinWidth="150" Padding="10,1,10,1" Width="328"/>
+        <StackPanel Height="24"
+                Name="StackPanel1"
+                Orientation="Horizontal"
+                    Margin="0,358,0,0" Width="328" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <Viewbox Height="{Binding Path=ActualHeight, ElementName=StackPanel1}">
+                <CheckBox Name="AutologinCheck" Content="Keep me logged in"  Foreground="White" />
+            </Viewbox>
+        </StackPanel>
+        
+        <Button Style="{StaticResource button1}" Name="LoginButton" Content="Log In" Click="LoginButton_Click" Height="60" FontSize="28" FontWeight="Bold" Foreground="#DDFFFFFF" Margin="0,410,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" MinWidth="150" Padding="10,1,10,1" Width="328"/>
         <TextBlock Name="RegisterText" FontSize="24" Height="40" TextAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,30">
-    <Hyperlink NavigateUri="https://github.com/a22marramgar/GameLauncher/tree/LoginWindow" Foreground="#3174dc" TextDecorations="Underline" RequestNavigate="Hyperlink_RequestNavigate">
+    <Hyperlink NavigateUri="http://robot-escape.dam.inspedralbes.cat/register" Foreground="#3174dc" TextDecorations="Underline" RequestNavigate="Hyperlink_RequestNavigate">
         Create a free account
     </Hyperlink>
         </TextBlock>

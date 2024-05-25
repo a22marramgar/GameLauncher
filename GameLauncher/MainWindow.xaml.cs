@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Robot_Escape.Properties;
+using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
@@ -36,15 +37,19 @@ namespace GameLauncher
                 switch (_status)
                 {
                     case LauncherStatus.ready:
-                        PlayButton.Content = "Play";
+                        PlayButton.Opacity = 1;
+                        PlayButton.Content = "Start Game";
                         break;
                     case LauncherStatus.failed:
+                        PlayButton.Opacity = 1;
                         PlayButton.Content = "Update Failed - Retry";
                         break;
                     case LauncherStatus.downloadingGame:
+                        PlayButton.Opacity = 0.6;
                         PlayButton.Content = "Downloading Game";
                         break;
                     case LauncherStatus.downloadingUpdate:
+                        PlayButton.Opacity = 0.6;
                         PlayButton.Content = "Downloading Update";
                         break;
                     default:
@@ -56,6 +61,7 @@ namespace GameLauncher
         {
             InitializeComponent();
             _login = login;
+            WelcomeText.Text = login.Split(";")[0];
             rootPath = Directory.GetCurrentDirectory();
             versionFile = Path.Combine(rootPath,"version.txt");
             gameZip = Path.Combine(rootPath, "Build.zip");
@@ -71,7 +77,9 @@ namespace GameLauncher
 
                 try
                 {
+#pragma warning disable SYSLIB0014 // Type or member is obsolete
                     WebClient webClient = new WebClient();
+#pragma warning restore SYSLIB0014 // Type or member is obsolete
                     Version onlineVersion = new Version(webClient.DownloadString("https://onedrive.live.com/download?resid=82A5D8627B8C73F6%214113&authkey=!ACpSW6dtbU-aZXc"));
 
                     if (onlineVersion.IsDifferentThan(localVersion))
@@ -99,7 +107,9 @@ namespace GameLauncher
         {
             try
             {
+#pragma warning disable SYSLIB0014 // Type or member is obsolete
                 WebClient webClient = new WebClient();
+#pragma warning restore SYSLIB0014 // Type or member is obsolete
                 if (_isUpdate)
                 {
                     Status = LauncherStatus.downloadingUpdate;
@@ -109,8 +119,10 @@ namespace GameLauncher
                     Status = LauncherStatus.downloadingGame;
                     _onlineVersion = new Version(webClient.DownloadString("https://onedrive.live.com/download?resid=82A5D8627B8C73F6%214113&authkey=!ACpSW6dtbU-aZXc"));
                 }
-
+                webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(DownloadProgressCallback);
+#pragma warning disable CS8622 // Nullability of reference types in type of parameter doesn't match the target delegate (possibly because of nullability attributes).         
                 webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(DownloadGameCompletedCallback);
+#pragma warning restore CS8622 // Nullability of reference types in type of parameter doesn't match the target delegate (possibly because of nullability attributes).
                 webClient.DownloadFileAsync(new Uri("https://onedrive.live.com/download?resid=82A5D8627B8C73F6%214114&authkey=!AOJhq3HlX-0ACgo"), gameZip, _onlineVersion);
             }
             catch (Exception ex)
@@ -120,11 +132,27 @@ namespace GameLauncher
             }
         }
 
+        private void DownloadProgressCallback(object sender, DownloadProgressChangedEventArgs e)
+        {
+            DownloadProgress.Value = e.ProgressPercentage;
+            if(Status == LauncherStatus.downloadingUpdate)
+            {
+                PlayButton.Content = $"Downloading Update ({e.ProgressPercentage}%)";
+            }
+            else
+            {
+                PlayButton.Content = $"Downloading Game ({e.ProgressPercentage}%)";
+            }
+            
+        }
+
         private void DownloadGameCompletedCallback(object sender, AsyncCompletedEventArgs e)
         {
             try
             {
+#pragma warning disable CS8605 // Unboxing a possibly null value.
                 string onlineVersion = ((Version)e.UserState).ToString();
+#pragma warning restore CS8605 // Unboxing a possibly null value.
                 ZipFile.ExtractToDirectory(gameZip, rootPath, true);
                 File.Delete(gameZip);
 
@@ -160,6 +188,14 @@ namespace GameLauncher
             {
                 CheckForUpdates();
             }
+        }
+
+        private void LogoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            Settings.Default.Reset();
+            LoginWindow window = new LoginWindow();
+            window.Show();
+            Close();
         }
     }
 

@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Text;
 using System;
 using Newtonsoft.Json;
+using Robot_Escape.Properties;
 
 namespace GameLauncher
 {
@@ -19,6 +20,11 @@ namespace GameLauncher
         {
             InitializeComponent();
             httpClient = new HttpClient();
+            if(Settings.Default.SaveUser == true)
+            {
+                StartLoading();
+                Login(Settings.Default.Username, Settings.Default.Password);
+            }
         }
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
@@ -47,17 +53,28 @@ namespace GameLauncher
             try
             {
                 // Create the request data
-                var requestData = new { email = email, password = password };
+                var requestData = new { username = email, password = password };
                 var json = JsonConvert.SerializeObject(requestData);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
 
                 // Make the HTTP POST request to your API endpoint
-                HttpResponseMessage response = await httpClient.PostAsync("http://localhost:3666/users/login", content);
+                HttpResponseMessage response = await httpClient.PostAsync("http://robot-escape.dam.inspedralbes.cat:3666/users/login", content);
                 StopLoading();
                 // Check if the request was successful
                 if (response.IsSuccessStatusCode)
                 {
                     // Handle successful login here
+                    if (AutologinCheck.IsChecked == true)
+                    {
+                        Settings.Default.Username = email;
+                        Settings.Default.Password = password;
+                        Settings.Default.SaveUser = true;
+                        Settings.Default.Save();
+                    }
+                    else
+                    {
+                        Settings.Default.Reset();
+                    }
                     MainWindow window = new MainWindow(email + ";" + password);
                     window.Show();
                     Close();

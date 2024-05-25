@@ -7,10 +7,16 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         ContentRendered="Window_ContentRendered"
-        Title="Launcher" Height="576" Width="1080">
+        ResizeMode="NoResize"
+        Background="#15171e"
+        Title="Launcher" Height="576" Width="728"
+        Style="{StaticResource WinAll}">
     <Grid>
-        <Image Stretch="UniformToFill" Source="images/LauncherBackground.jpg"/>
+        <TextBlock Name="WelcomeText" Text="Welcome!" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="24" Foreground="Gray" Margin="0, 7, 100, 0"/>
+        <Button Style="{StaticResource button1}" Width="80" Opacity="1" Click="LogoutButton_Click" Name="LogoutButton" Content="Logout" FontSize="24" VerticalAlignment="Top" HorizontalAlignment="Right" Foreground="White" Margin="0, 5, 5, 0" Padding="10,1,10,1"/>
+        <TextBlock Name="GameTitleText" Text="ROBOT ESCAPE" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="96" Foreground="White"/>
         <TextBlock Name="VersionText" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontSize="24" Foreground="White" Margin="0, 0, 5, 0"/>
-        <Button Name="PlayButton" Content="Checking For Updates" Click="PlayButton_Click" Height="60" FontSize="28" FontWeight="Bold" Foreground="#DDFFFFFF" Margin="0, 0, 0, 15" VerticalAlignment="Bottom" HorizontalAlignment="Center" MinWidth="150" Background="#FFFF9700" Padding="10,1,10,1"/>
+        <ProgressBar Name="DownloadProgress" Value="0" Foreground="#3174dc" Height="60" MinWidth="340" Margin="0, 0, 0, 30"  VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+        <Button Style="{StaticResource button1}" Opacity="0.6" Name="PlayButton" Content="Checking For Updates" Click="PlayButton_Click" Height="60" FontSize="36" FontWeight="Bold" Foreground="#DDFFFFFF" Margin="0, 0, 0, 30" VerticalAlignment="Bottom" HorizontalAlignment="Center" MinWidth="340" Padding="10,1,10,1"/>
     </Grid>
 </Window>
